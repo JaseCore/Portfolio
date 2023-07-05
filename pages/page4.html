@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Связь со мной</title>
+    <link rel="stylesheet" href="/pages.css/page4.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;300;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="navigation">
+            <a href="index.html"><img src="/images/Logo.svg" alt="" width="50px" class="logo"></a>
+            <a href="pages/page1.html" class="nav-link1">Резюме</a>
+            <a href="pages/page2.html" class="nav-link2">Навыки</a>
+            <a href="pages/page3.html" class="nav-link3">Сертификат</a>
+            <a href="page4.html" class="nav nav-link4">Связь со мной</a>
+        </div>
+    </nav>
+    <main>
+        <h1 class="main-text">Связь со мной</h1>
+        <div class="block1">
+            <h2 class="block1-text">Discord : <a href="https://discord.gg/MNBgtJmY7s" class="discord-link">Перейти на сервер</a></h2>
+            <h2 class="block1-text2">Telegram : <a href="https://t.me/itwdevelopment" class="telegram-link">Перейти в канал</a></h2>
+            <h2 class="block1-text3">GitHub : <a href="https://github.com/JaseCore" class="github-link">Перейт в GutHub профиль
+            </a></h2>
+            <h2 class="block1-text4">Instagram : <a href="https://instagram.com/jase_core.life?igshid=MzNlNGNkZWQ4Mg==" class="instagram-link">Перейти в инстаграм</a></h2>
+        </div>
+    </main>
+
+    <style>
+        :root {
+            --color: black;
+            --cursor-size: 30px;
+        }
+        
+        * {
+            cursor: none;
+        }
+        
+        html,
+        body {
+            height: 100%;
+        }
+        
+        body {
+            background: white;
+        }
+        
+        .custom-cursor {
+            position: absolute;
+            z-index: 99;
+            top: 0;
+            left: 0;
+        
+            width: var(--cursor-size);
+            height: var(--cursor-size);
+        
+            border: calc(var(--cursor-size)
+                        /30) solid black;
+            border-radius: 50%;
+        
+            animation: cursor 800ms infinite 
+                    alternate ease-in-out;
+              pointer-events: none;
+        }
+        
+        .custom-cursor::before {
+            content: "";
+            display: block;
+            width: calc(var(--cursor-size) / 2);
+            height: calc(var(--cursor-size) / 2);
+        
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        
+            border: calc(var(--cursor-size) / 6) 
+                    solid rgba(var(--color), 0.5);
+        
+            border-radius: 50%;
+        
+            animation: cursor-before 800ms infinite 
+                    alternate ease-in-out;
+        }
+        
+        .custom-cursor.click {
+            animation: cursor-click 800ms 
+                normal ease-in-out;
+        }
+        
+        @keyframes cursor {
+            from {
+                transform: scale(1);
+                border-color: black;
+            }
+        
+            to {
+                transform: scale(1.5);
+            }
+        }
+        
+        @keyframes cursor-before {
+            from {
+                transform: translate(-50%, -50%) scale(1);
+                border-color: rgba(var(--color), 0.5);
+            }
+        
+            to {
+                transform: translate(-50%, -50%) scale(1.5);
+                border-color: rgba(var(--color), 0.75);
+            }
+        }
+        
+        @keyframes cursor-click {
+        
+            0%,
+            100% {
+                transform: scale(1);
+            }
+        
+            50% {
+                transform: scale(2.5);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="custom-cursor"></div>
+</body>
+<script type="text/javascript" charset="utf-8">
+    const cursor = document
+        .querySelector(".custom-cursor");
+    
+    // Adding the animations when the
+    // mouse button is clicked
+    
+    window.addEventListener("mousedown", (event) => {
+        if (!cursor.classList.contains("click")) {
+            cursor.classList.add("click");
+    
+            setTimeout(() => {
+                cursor.classList.remove("click");
+            }, 800);
+        }
+    });
+    
+    // Getting the position of the cursor
+    window.addEventListener("mousemove", (event) => {
+        let x = event.pageX - cursor.offsetWidth / 2,
+            y = event.pageY - cursor.offsetHeight / 2;
+    
+        cursor.style.left = `${x}px`;
+        cursor.style.top = `${y}px`;
+    });
+    
+</script>
+    <style>
+        body {
+    margin: 0;
+    height: 0;
+    font-family: 'Geologica', sans-serif;
+}
+
+.navigation {
+    border: 2px solid;
+    margin-left: 500px;
+    width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+}
+
+.logo {
+    margin-left: 10px;
+    padding-top: 2px;
+}
+
+.main-text {
+    margin-top: 50px;
+    font-size: 60px;
+    height: 0px;
+    text-align: center;
+}
+
+.main-text2 {
+    font-size: 30px;
+    margin-top: 100px;
+    text-align: center;
+    height: 0px;
+}
+
+.hr1 {
+    margin-top: 200px;
+    width: 500px;
+    border: 1px solid;
+}
+
+.nav-link1 {
+    padding-left: 300px;
+    text-decoration: none;
+    padding-top: 10px;
+    color: gray;
+    height: 0px;
+}
+
+.nav-link1:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+.nav-link2 {
+    padding-left: 20px;
+    text-decoration: none;
+    padding-top: 10px;
+    color: gray;
+    height: 0px;
+}
+
+.nav-link2:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+.nav-link3 {
+    padding-left: 20px;
+    text-decoration: none;
+    padding-top: 10px;
+    color: gray;
+    height: 0px;
+}
+
+.nav-link3:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+.nav-link4 {
+    padding-left: 20px;
+    text-decoration: none;
+    padding-top: 10px;
+    color: gray;
+    height: 0px;
+}
+
+.nav-link4:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+.block1-text {
+    text-align: center;
+    margin-top: 200px;
+    font-size: 30px;
+}
+
+.discord-link {
+    text-decoration: none;
+    color: gray;
+}
+
+.discord-link:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+.block1-text2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.telegram-link {
+    text-decoration: none;
+    color: gray;
+}
+
+.telegram-link:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+.block1-text3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.github-link {
+    text-decoration: none;
+    color: gray;
+}
+
+.github-link:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+.block1-text4 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.instagram-link {
+    text-decoration: none;
+    color: gray;
+}
+
+.instagram-link:hover {
+    color: black;
+    transition: 0.5s;
+}
+    </style>
+</body>
+</html>
